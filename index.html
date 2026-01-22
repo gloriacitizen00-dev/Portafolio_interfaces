@@ -50,27 +50,19 @@
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
   }
 
-  /* 🔥 INTERACCIÓN POR PAÍS (texto) */
-  svg text {
-    transition: transform 0.3s ease, fill 0.3s ease;
-    cursor: pointer;
-    transform-origin: center;
-  }
-
-  svg text:hover {
-    fill: #c1121f;
-    transform: scale(1.3);
-  }
-
-/* 🔥 INTERACCIÓN POR PAÍS (texto) */
+ /* ===== INTERACCIÓN POR PAÍS (SVG real) ===== */
 svg text {
-  transition: transform 0.3s ease, fill 0.3s ease;
+  pointer-events: all !important;
   cursor: pointer;
+
+  transform-box: fill-box;
   transform-origin: center;
+
+  transition: transform 0.3s ease, fill 0.3s ease;
 }
 
 svg text:hover {
-  fill: #c1121f;
+  fill: #c1121f !important;
   transform: scale(1.3);
 }
 
