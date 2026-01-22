@@ -2,112 +2,11 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Interfaces Experimentales - CO₂</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      text-align: center;
-      padding: 40px;
-    }
-
-    h1 {
-      color: #333;
-    }
-
-    /* Círculo interactivo */
-    .co2-circle {
-      background: #ff4c4c;
-      color: white;
-      font-weight: bold;
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 20px auto;
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
-    .co2-circle:hover {
-      transform: scale(1.3);
-    }
-
-    /* Línea punteada */
-    .co2-line {
-      width: 200px;
-      height: 4px;
-      background: repeating-linear-gradient(
-        to right,
-        #333,
-        #333 10px,
-        transparent 10px,
-        transparent 20px
-      );
-      margin: 20px auto;
-      transition: transform 0.3s ease, filter 0.3s ease;
-    }
-    .co2-line:hover {
-      transform: scaleX(1.2);
-      filter: brightness(1.5);
-    }
-
-    /* Tarjeta */
-    .co2-card {
-      background: #222;
-      color: #fff;
-      padding: 20px;
-      width: 250px;
-      border-radius: 12px;
-      margin: 20px auto;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .co2-card:hover {
-      transform: scale(1.1);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-    }
-
-    /* Texto */
-    .co2-text {
-      font-size: 24px;
-      color: #ff4c4c;
-      margin-top: 30px;
-      transition: transform 0.3s ease;
-    }
-    .co2-text:hover {
-      transform: scale(1.2);
-    }
-
-    /* SVG embebido */
-    .svg-container {
-      margin-top: 40px;
-    }
-    .svg-container img {
-      width: 80%;
-      max-width: 600px;
-      transition: transform 0.3s ease;
-    }
-    .svg-container img:hover {
-      transform: scale(1.05);
-    }
-  </style>
+  <title>Prueba SVG</title>
 </head>
 <body>
-  <h1>Interfaces Experimentales - CO₂</h1>
+  <h1>Prueba de documento SVG</h1>
 
-  <div class="co2-circle">37.8 Gt</div>
-  <div class="co2-line"></div>
-  <div class="co2-card">
-    <h3>United States</h3>
-    <p>Per capita: 25.6 → 17.5 t</p>
-    <p>Total: 4,904 Mt CO₂</p>
-  </div>
-  <h2 class="co2-text">No tenemos un segundo planeta</h2>
-
-  <!-- Aquí insertas tu SVG exportado de Illustrator -->
- <div class="svg-container">
   <img src="co2-document.svg" alt="CO₂ Document Visualization">
-</div>
 </body>
 </html>
