@@ -4,16 +4,12 @@
   <meta charset="UTF-8">
   <title>CO₂ Emissions per Country, 2020–2024</title>
 
-  <!-- Google Font: Bebas Neue -->
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
   <style>
-    /* Reset básico */
     html, body {
       margin: 0;
       padding: 0;
@@ -28,6 +24,7 @@
       align-items: center;
       background-color: #f5f5f5;
       font-family: 'Bebas Neue', Arial, sans-serif;
+      transition: background-color 0.8s ease;
     }
 
     h1 {
@@ -35,47 +32,48 @@
       letter-spacing: 0.15em;
       margin-bottom: 24px;
       text-align: center;
+      transition: opacity 0.6s ease;
     }
 
-    /* Imagen SVG */
+    /* 🌬️ respiración */
+    @keyframes breathe {
+      0%   { transform: scale(1); }
+      50%  { transform: scale(1.02); }
+      100% { transform: scale(1); }
+    }
+
     img {
       max-width: 90vw;
       max-height: 80vh;
+      width: auto;
+      height: auto;
       background-color: white;
       padding: 12px;
 
-      /* respiración */
       animation: breathe 6s ease-in-out infinite;
-
-      /* interacción */
       transition: transform 0.6s ease, box-shadow 0.6s ease;
-      cursor: zoom-in;
+      
+      /* 💛 cursor corazón */
+      cursor: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'>\
+<path fill='%23FFD400' d='M12 21s-6.7-4.35-10-8.5C-0.5 8.5 2 4 6 4c2.1 0 3.4 1.2 4 2 0.6-0.8 1.9-2 4-2 4 0 6.5 4.5 4 8.5C18.7 16.65 12 21 12 21z'/>\
+</svg>") 16 16, auto;
     }
 
+    /* 🎯 hover: foco */
     img:hover {
       animation-play-state: paused;
-      transform: scale(1.05);
-      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+      transform: scale(1.06);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
     }
 
-    @keyframes breathe {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.02);
-      }
-      100% {
-        transform: scale(1);
-      }
+    /* 🌑 oscurecer fondo al interactuar */
+    body:has(img:hover) {
+      background-color: #1a1a1a;
     }
 
-    /* Micro-interfaz */
-    .hint {
-      margin-top: 16px;
-      font-size: 0.9rem;
-      letter-spacing: 0.15em;
-      opacity: 0.5;
+    body:has(img:hover) h1 {
+      opacity: 0.4;
     }
   </style>
 </head>
@@ -87,7 +85,5 @@
     src="./co2-document.svg"
     alt="CO₂ Emissions per Country, 2020–2024"
   >
-
-  <p class="hint">Move cursor to explore</p>
 </body>
 </html>
