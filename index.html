@@ -17,7 +17,45 @@
       height: 100%;
     }
 
-    body {
+     html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .back-link {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+      background: #f0f0f0;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      z-index: 999;
+    }
+
+    .back-link:hover {
+      background: #ddd;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+
+    body 
+<a href="https://gloriacitizen00-dev.github.io/" class="back-link">← Regresar al portafolio</a>
+
+<header>
+  <h1>Interfaces experimentales</h1>
+</header>
+
+<main>
+  <p>Proyectos de diseño interactivo, UX creativo y narrativas visuales.</p>
+</main>    
+
+    {
       display: flex;
       flex-direction: column;
       justify-content: center;
