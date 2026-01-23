@@ -7,9 +7,13 @@
   <!-- Google Font: Bebas Neue -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
+    /* Reset básico */
     html, body {
       margin: 0;
       padding: 0;
@@ -33,23 +37,46 @@
       text-align: center;
     }
 
+    /* Imagen SVG */
     img {
       max-width: 90vw;
       max-height: 80vh;
-      width: auto;
-      height: auto;
       background-color: white;
       padding: 12px;
+
+      /* respiración */
+      animation: breathe 6s ease-in-out infinite;
+
+      /* interacción */
+      transition: transform 0.6s ease, box-shadow 0.6s ease;
+      cursor: zoom-in;
     }
 
-    img {
-  transition: transform 0.6s ease, box-shadow 0.6s ease;
-}
+    img:hover {
+      animation-play-state: paused;
+      transform: scale(1.05);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+    }
 
-img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
-}
+    @keyframes breathe {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.02);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* Micro-interfaz */
+    .hint {
+      margin-top: 16px;
+      font-size: 0.9rem;
+      letter-spacing: 0.15em;
+      opacity: 0.5;
+    }
   </style>
 </head>
 
@@ -59,6 +86,8 @@ img:hover {
   <img
     src="./co2-document.svg"
     alt="CO₂ Emissions per Country, 2020–2024"
-  >  
+  >
+
+  <p class="hint">Move cursor to explore</p>
 </body>
 </html>
