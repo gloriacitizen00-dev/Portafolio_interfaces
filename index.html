@@ -17,13 +17,17 @@
       height: 100%;
     }
 
-     html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;   /* centra vertical */
+      align-items: center;       /* centra horizontal */
+      background-color: #f5f5f5;
+      font-family: 'Bebas Neue', Arial, sans-serif;
+      transition: background-color 0.8s ease;
     }
-    
+
+    /* BOTÓN REGRESAR */
     .back-link {
       position: fixed;
       top: 10px;
@@ -41,28 +45,6 @@
     .back-link:hover {
       background: #ddd;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-
-
-    body 
-<a href="https://gloriacitizen00-dev.github.io/" class="back-link">← Regresar al portafolio</a>
-
-<header>
-  <h1>Interfaces experimentales</h1>
-</header>
-
-<main>
-  <p>Proyectos de diseño interactivo, UX creativo y narrativas visuales.</p>
-</main>    
-
-    {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: #f5f5f5;
-      font-family: 'Bebas Neue', Arial, sans-serif;
-      transition: background-color 0.8s ease;
     }
 
     h1 {
@@ -117,8 +99,11 @@
 </head>
 
 <body>
+  <!-- Botón para volver al portafolio principal -->
+  <a href="https://gloriacitizen00-dev.github.io/" class="back-link">← Regresar al portafolio</a>
+
   <h1>CO₂ Emissions per Country, 2020–2024</h1>
 
- <img src="./co2-emission.svg" alt="CO₂ Emissions per Country, 2020–2024">
+  <img src="./co2-emission.svg" alt="CO₂ Emissions per Country, 2020–2024">
 </body>
 </html>
